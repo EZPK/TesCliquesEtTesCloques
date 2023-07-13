@@ -1,26 +1,27 @@
 # TesCliquesEtTesCloques
-auto clicker
 
-# Activer Virtual env
+Le futur de l'auto-clicker
 
-> python -m venv venv
+# Activer Virtual env et installer les libs
 
-> cd venv/Scripts/
+> python run.py install    #installe le venv
 
-> ./activate
+> venv\Scripts\activate    #active le venv
 
-> cd ../..
+> python run.py lib        #installe les libs dans le venv
 
-# Désactiver
-
+# Désactiver venv
 > deactivate
 
+# Install des libs et 
 
-# Install des libs
+1. On vérifie que le venv est activé:
+
+> venv\Scripts\activate
+
+2. On installe les libs
 
 > pip install <lib>
 
 > pip freeze > requirements.txt         # On sauve l'env virtuel
 > pip install -r requirements.txt       # Pour réinstaller le bordel
-
-test

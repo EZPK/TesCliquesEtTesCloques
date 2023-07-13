@@ -19,3 +19,5 @@ auto clicker
 
 > pip freeze > requirements.txt         # On sauve l'env virtuel
 > pip install -r requirements.txt       # Pour réinstaller le bordel
+
+test

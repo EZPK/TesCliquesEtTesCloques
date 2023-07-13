@@ -7,7 +7,7 @@ help:
 .PHONY: install
 install: venv/lib/pip
 	venv/lib/pip install -r ./requirements.txt
-	venv/lib/python main.py
+venv/lib/python main.py	
 
 .PHONY: clean
 clean:

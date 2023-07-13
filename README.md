@@ -2,13 +2,13 @@
 
 Le futur de l'auto-clicker
 
-# Activer Virtual env et installer les libs (dans le venv)
+# Activer Virtual env et installer les libs
 
-> python run.py install
+> python run.py install    #installe le venv
 
-> venv\Scripts\activate
+> venv\Scripts\activate    #active le venv
 
-> python run.py lib
+> python run.py lib        #installe les libs dans le venv
 
 # Désactiver venv
 > deactivate

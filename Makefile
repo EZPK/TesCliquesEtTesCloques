@@ -1,16 +1,18 @@
+# Pas fonctionnel sous windows
+
 .Phony: help
 help:
 	@cat "Makefile" | grep '^.PHONY:' | sed -e "s/^.PHONY:/- make/"
 
 .PHONY: install
-install: venv/bin/pip
-	venv/bin/pip install -r requirement.txt
-	venv/bin/python3 main.py
+install: venv/lib/pip
+	venv/lib/pip install -r ./requirements.txt
+	venv/lib/python main.py
 
 .PHONY: clean
 clean:
 	rm -rf venv
 	ls -la
 
-venv/bin/pip:
-	python3 -m venv venv
+venv/lib/pip:
+	python -m venv venv

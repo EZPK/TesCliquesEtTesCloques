@@ -1,8 +1,13 @@
+# How to use:
+#
+# python run.py install --> Installe un environnement virutel "venv" vierge
+# python run.py clean --> Clean l'environnement virtuel
+# python run.py lib --> Installe les librairies du requirements.txt
+
 import subprocess
 import sys
 import os
 import shutil
-import logging
 
 directory = 'D:\Informatique\TesCliquesEtTesCloques'
 venv_name = 'venv'
@@ -34,19 +39,6 @@ def install_venv():
         subprocess.check_call([sys.executable, '-m', 'venv', venv_path],stdout=devnull, stderr=devnull)
         print(f"L'environnement virtuel '{venv_name}' a été installé avec succès au path {venv_path}.")
         print(f"Activez le avec: > .\\venv\\Script\\activate")
-
-        # if is_venv_active():
-        #     print('Venv est déjà actif')
-        # else:
-        #     activate_script = os.path.join(venv_path, 'Scripts', 'activate.bat')
-        #     # subprocess.check_call(activate_script, shell=True, stdout=devnull, stderr=devnull)
-        #     subprocess.check_call(activate_script, shell=True)
-        #     print(f"L'environnement virtuel '{venv_name}' a été activé avec succès.")
-
-        # requirements_file = directory + '/requirements.txt'
-        # subprocess.check_call([os.path.join(venv_path, 'Scripts', 'pip'), 'install', '-r', requirements_file], stdout=devnull, stderr=devnull)
-        # print(f"L'environnement virtuel '{venv_name}' a installé les librairies")
-
     except OSError as error:
         print(error)
 
@@ -80,16 +72,6 @@ def cleanvenv(directory, venv_name):
             print(f"L'environnement virtuel '{venv_name}' a été supprimé avec succès.")
         except OSError as error:
             print(error)
-
-
-
-def stop(venv_path):
-    try:
-        subprocess.check_call(os.path.join(venv_path, 'Scripts', 'deactivate.bat'), stdout=devnull, stderr=devnull)
-        print(f"L'environnement virtuel '{venv_name}' a été désactivé avec succès.")
-
-    except OSError as error:
-        print(error)
 
 def is_venv_active():
     return 'VIRTUAL_ENV' in os.environ

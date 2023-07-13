@@ -1,12 +1,16 @@
 # TesCliquesEtTesCloques
 auto clicker
 
-# Virtual env
+# Activer Virtual env
 
 > python -m venv venv
 > cd venv/Scripts/
 > ./activate
 > cd ../..
+
+# Désactiver
+
+> deactivate
 
 
 # Install des libs

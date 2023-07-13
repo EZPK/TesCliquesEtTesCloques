@@ -76,6 +76,5 @@ def cleanvenv(directory, venv_name):
 def is_venv_active():
     return 'VIRTUAL_ENV' in os.environ
 
-
 if __name__ == '__main__':
     main()

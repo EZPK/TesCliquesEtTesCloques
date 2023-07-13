@@ -1,0 +1,2 @@
+# TesCliquesEtTesCloques
+auto clicker

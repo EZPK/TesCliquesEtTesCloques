@@ -4,8 +4,11 @@ auto clicker
 # Activer Virtual env
 
 > python -m venv venv
+
 > cd venv/Scripts/
+
 > ./activate
+
 > cd ../..
 
 # Désactiver
